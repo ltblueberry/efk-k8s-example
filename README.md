@@ -65,6 +65,8 @@ Create Index Lifecycle Policy to delete stale indices
 
 Go to the side menu and open **Management**/**Dev Tools**
 
+![kibana-dev-tools](screenshots/screenshot-kibana-dev-tools.png)
+
 
 Next request will create **Index Lifecycle Policy**, that will delete indices older that 20 days
 ```
