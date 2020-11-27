@@ -43,3 +43,12 @@ helm install elasticsearch elastic/elasticsearch --set volumeClaimTemplate.resou
 
 
 # Kibana
+
+Deploy [Kibana manifests](kibana/)
+
+```
+kubectl apply -f kibana/
+```
+
+![kibana-deploy](screenshots/screenshot-kibana-deploy.png)
+
