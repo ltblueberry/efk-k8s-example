@@ -118,11 +118,31 @@ kubectl apply -f fluentbit/
 
 ![fluentbit-deploy](screenshots/screenshot-fluentbit-deploy.png)
 
+
 **configmap.yaml** - configuration for Fluent Bit
 * INPUT - define Tag Regex to match by namespace
 * FILTER - define custom parser 'k8s-custom-tag'
 * OUTPUT - match only **example** namespace and write to **example** index
 * PARSER - parser for defined tag regex
+
+
+# Generate demo data
+
+Create the example namespace
+```
+kubectl create namespace example
+```
+
+Deploy log-generator pod
+```
+kubectl apply -f example/pod.yaml
+```
+
+![log-generator-deploy](screenshots/screenshot-log-generator-deploy.png)
+
+
+
+
 
 
 
