@@ -104,3 +104,25 @@ PUT _template/example_template
 
 
 Now all indices that match the example index template will apply that lifecycle policy when created.
+
+
+# Fluent Bit
+
+[Official installation guide](https://docs.fluentbit.io/manual/installation/kubernetes#installation)
+
+Deploy [FluentBit manifests](fluentbit/)
+
+```
+kubectl apply -f fluentbit/
+```
+
+![fluentbit-deploy](screenshots/screenshot-fluentbit-deploy.png)
+
+**configmap.yaml** - configuration for Fluent Bit
+* INPUT - define Tag Regex to match by namespace
+* FILTER - define custom parser 'k8s-custom-tag'
+* OUTPUT - match only **example** namespace and write to **example** index
+* PARSER - parser for defined tag regex
+
+
+
