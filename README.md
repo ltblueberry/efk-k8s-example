@@ -26,4 +26,17 @@ Add and update elastic helm repository
 helm repo add elastic https://helm.elastic.co
 helm repo update
 ```
+
 ![elastic helm repo](screenshots/screenshot-elastic-helm-repo.png)
+
+
+Deploy elasticsearch release from helm chart
+```
+helm install elasticsearch elastic/elasticsearch -n monitoring
+```
+or if you want to change the storage size
+```
+helm install elasticsearch elastic/elasticsearch --set volumeClaimTemplate.resources.requests.storage="60Gi" -n monitoring
+```
+
+![elastic pods](screenshots/screenshot-elastic-pods.png)
