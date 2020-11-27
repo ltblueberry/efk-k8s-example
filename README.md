@@ -14,3 +14,5 @@ Create the monitoring namespace
 ```
 kubectl create namespace monitoring
 ```
+
+![created namespace](screenshots/screenshot-namespace.png)
