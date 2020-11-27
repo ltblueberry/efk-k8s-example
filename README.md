@@ -30,7 +30,7 @@ helm repo update
 ![elastic helm repo](screenshots/screenshot-elastic-helm-repo.png)
 
 
-Deploy elasticsearch release from helm chart
+Deploy elasticsearch release from the helm chart
 ```
 helm install elasticsearch elastic/elasticsearch -n monitoring
 ```
@@ -40,3 +40,6 @@ helm install elasticsearch elastic/elasticsearch --set volumeClaimTemplate.resou
 ```
 
 ![elastic pods](screenshots/screenshot-elastic-pods.png)
+
+
+# Kibana
