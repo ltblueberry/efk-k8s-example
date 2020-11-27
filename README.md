@@ -61,6 +61,9 @@ Add our example domain to **/etc/hosts**
 ```
 
 # Kibana Lifecycle Policy
+
+Open Kibana in web-browser **kibana.example.com**
+
 Create Index Lifecycle Policy to delete stale indices
 
 Go to the side menu and open **Management**/**Dev Tools**
@@ -141,7 +144,35 @@ kubectl apply -f example/pod.yaml
 ![log-generator-deploy](screenshots/screenshot-log-generator-deploy.png)
 
 
+# Check out example logs
 
+Open Kibana in web-browser **kibana.example.com**
+
+
+Go to the side menu and open **Management**/**Stack Management**/**Index Management**
+Check out our new **example** index
+
+![kibana-index-management](screenshots/screenshot-kibana-index-management.png)
+
+
+Check out the index detail info about the lifecycle policy
+
+![kibana-index-management-policy](screenshots/screenshot-kibana-index-management-policy.png)
+
+
+Create new Index Pattern for our example indecies. It should match all indecies that start with 'example'.
+
+![kibana-index-management-policy](screenshots/screenshot-kibana-index-pattern.png)
+
+
+Select time field @timestamp
+
+![kibana-index-management-policy](screenshots/screenshot-kibana-index-pattern-time-field.png)
+
+
+Check out logs from the log generator. Go to the side menu and open **Kibana**/**Discover** and select the index pattern.
+
+![kibana-discover](screenshots/screenshot-kibana-discover.png)
 
 
 
