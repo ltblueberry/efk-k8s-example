@@ -150,6 +150,7 @@ Open Kibana in web-browser **kibana.example.com**
 
 
 Go to the side menu and open **Management**/**Stack Management**/**Index Management**
+
 Check out our new **example** index
 
 ![kibana-index-management](screenshots/screenshot-kibana-index-management.png)
@@ -165,7 +166,7 @@ Create new Index Pattern for our example indecies. It should match all indecies 
 ![kibana-index-management-policy](screenshots/screenshot-kibana-index-pattern.png)
 
 
-Select time field @timestamp
+Select time field **@timestamp**
 
 ![kibana-index-management-policy](screenshots/screenshot-kibana-index-pattern-time-field.png)
 
