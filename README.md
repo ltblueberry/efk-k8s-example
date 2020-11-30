@@ -8,7 +8,7 @@
 * example domain **kibana.example.com**
 
 
-# Namespace
+## Namespace
 
 Create the monitoring namespace
 ```
@@ -18,7 +18,7 @@ kubectl create namespace monitoring
 ![created namespace](screenshots/screenshot-namespace.png)
 
 
-# Elasticsearch
+## Elasticsearch
 Install Elasticsearch from [this helm chart](https://github.com/elastic/helm-charts/tree/master/elasticsearch) 
 
 Add and update elastic helm repository
@@ -42,7 +42,7 @@ helm install elasticsearch elastic/elasticsearch --set imageTag="7.9.1",volumeCl
 ![elastic pods](screenshots/screenshot-elastic-pods.png)
 
 
-# Kibana
+## Kibana
 
 Deploy [Kibana manifests](kibana/)
 
@@ -53,14 +53,14 @@ kubectl apply -f kibana/
 ![kibana-deploy](screenshots/screenshot-kibana-deploy.png)
 
 
-# Example domain
+## Example domain
 
 Add our example domain to **/etc/hosts**
 ```
 34.66.45.242  kibana.example.com
 ```
 
-# Kibana Lifecycle Policy
+## Kibana Lifecycle Policy
 
 Open Kibana in web-browser **kibana.example.com**
 
@@ -109,7 +109,7 @@ PUT _template/example_template
 Now all indices that match the example index template will apply that lifecycle policy when created.
 
 
-# Fluent Bit
+## Fluent Bit
 
 [Official installation guide](https://docs.fluentbit.io/manual/installation/kubernetes#installation)
 
@@ -129,7 +129,7 @@ kubectl apply -f fluentbit/
 * PARSER - parser for defined tag regex
 
 
-# Generate demo data
+## Generate demo data
 
 Create the example namespace
 ```
@@ -144,7 +144,7 @@ kubectl apply -f example/pod.yaml
 ![log-generator-deploy](screenshots/screenshot-log-generator-deploy.png)
 
 
-# Check out example logs
+## Check out example logs
 
 Open Kibana in web-browser **kibana.example.com**
 
